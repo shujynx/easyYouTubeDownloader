@@ -9,7 +9,6 @@ namespace easyYoutubeDownloader
         public mainUI()
         {
             InitializeComponent();
-            
         }
 
         private void donateLink_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -29,7 +28,7 @@ namespace easyYoutubeDownloader
                 MessageBox.Show("You need at least 1 of the download checkboxes ticked", "Error", MessageBoxButtons.OK);
                 return;
             }
-            string cmdStr = "youtube-dl -f ";
+            string cmdStr = "yt-dlp -f ";
             if (checkBox1.Checked && checkBox2.Checked)
             {
                 cmdStr = cmdStr + "bestvideo+bestaudio/best " + videoURL.Text;
@@ -61,7 +60,7 @@ namespace easyYoutubeDownloader
 
         private void ytdlGithub_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            Process.Start("https://github.com/ytdl-org/youtube-dl/");
+            Process.Start("https://github.com/yt-dlp/yt-dlp");
         }
     }
 }

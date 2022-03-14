@@ -135,10 +135,10 @@
             this.ytdlGithub.AutoSize = true;
             this.ytdlGithub.Location = new System.Drawing.Point(12, 362);
             this.ytdlGithub.Name = "ytdlGithub";
-            this.ytdlGithub.Size = new System.Drawing.Size(90, 13);
+            this.ytdlGithub.Size = new System.Drawing.Size(66, 13);
             this.ytdlGithub.TabIndex = 12;
             this.ytdlGithub.TabStop = true;
-            this.ytdlGithub.Text = "youtube-dl Github";
+            this.ytdlGithub.Text = "yt-dlp Github";
             this.ytdlGithub.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.ytdlGithub_LinkClicked);
             // 
             // mainUI

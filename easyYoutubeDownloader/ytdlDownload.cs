@@ -18,18 +18,18 @@ namespace easyYoutubeDownloader
         {
             WebClient wc = new WebClient();
             wc.DownloadFileCompleted += new AsyncCompletedEventHandler(Completed);
-            wc.DownloadFileAsync(new Uri("https://github.com/ytdl-org/youtube-dl/releases/latest/download/youtube-dl.exe"), "youtube-dl.exe");
+            wc.DownloadFileAsync(new Uri("https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp.exe"), "yt-dlp.exe");
         }
 
         static void Completed(object sender, AsyncCompletedEventArgs e)
         {
-            MessageBox.Show("youtube-dl.exe was downloaded, re-open the program", "", MessageBoxButtons.OK);
+            MessageBox.Show("yt-dlp.exe was downloaded, re-open the program", "", MessageBoxButtons.OK);
             Application.Exit();
         }
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            Process.Start("https://github.com/ytdl-org/youtube-dl/");
+            Process.Start("https://github.com/yt-dlp/yt-dlp");
         }
     }
 }
