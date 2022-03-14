@@ -8,4 +8,5 @@ It's quite simple! You put in your YouTube URL, select if you want Video, Audio 
 
 ### Changelog
 Version 1.1.0: Switched to yt-dlp for faster and more reliable downloads
+
 Version 1.0.0: Initial Release
