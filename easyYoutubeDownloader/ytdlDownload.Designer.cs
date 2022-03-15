@@ -65,6 +65,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ytdlDownload";
             this.Text = "easyYouTubeDownloader";
+            this.Load += new System.EventHandler(this.ytdlDownload_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
