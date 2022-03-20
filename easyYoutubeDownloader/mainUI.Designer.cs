@@ -39,6 +39,9 @@
             this.label3 = new System.Windows.Forms.Label();
             this.consoleOutput = new System.Windows.Forms.RichTextBox();
             this.ytdlGithub = new System.Windows.Forms.LinkLabel();
+            this.downloadLocation = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.chooseDownloadLocationButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -60,7 +63,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(63, 39);
+            this.label2.Location = new System.Drawing.Point(63, 69);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(55, 13);
             this.label2.TabIndex = 2;
@@ -71,7 +74,7 @@
             this.checkBox1.AutoSize = true;
             this.checkBox1.Checked = true;
             this.checkBox1.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox1.Location = new System.Drawing.Point(124, 38);
+            this.checkBox1.Location = new System.Drawing.Point(124, 68);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(53, 17);
             this.checkBox1.TabIndex = 3;
@@ -83,7 +86,7 @@
             this.checkBox2.AutoSize = true;
             this.checkBox2.Checked = true;
             this.checkBox2.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox2.Location = new System.Drawing.Point(183, 38);
+            this.checkBox2.Location = new System.Drawing.Point(183, 68);
             this.checkBox2.Name = "checkBox2";
             this.checkBox2.Size = new System.Drawing.Size(53, 17);
             this.checkBox2.TabIndex = 4;
@@ -93,7 +96,7 @@
             // donateLink
             // 
             this.donateLink.AutoSize = true;
-            this.donateLink.Location = new System.Drawing.Point(468, 362);
+            this.donateLink.Location = new System.Drawing.Point(468, 392);
             this.donateLink.Name = "donateLink";
             this.donateLink.Size = new System.Drawing.Size(45, 13);
             this.donateLink.TabIndex = 5;
@@ -103,7 +106,7 @@
             // 
             // downloadButton
             // 
-            this.downloadButton.Location = new System.Drawing.Point(380, 39);
+            this.downloadButton.Location = new System.Drawing.Point(380, 69);
             this.downloadButton.Name = "downloadButton";
             this.downloadButton.Size = new System.Drawing.Size(133, 23);
             this.downloadButton.TabIndex = 8;
@@ -114,7 +117,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 60);
+            this.label3.Location = new System.Drawing.Point(12, 90);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(80, 13);
             this.label3.TabIndex = 10;
@@ -123,7 +126,7 @@
             // consoleOutput
             // 
             this.consoleOutput.DetectUrls = false;
-            this.consoleOutput.Location = new System.Drawing.Point(12, 76);
+            this.consoleOutput.Location = new System.Drawing.Point(12, 106);
             this.consoleOutput.Name = "consoleOutput";
             this.consoleOutput.ReadOnly = true;
             this.consoleOutput.Size = new System.Drawing.Size(512, 283);
@@ -133,7 +136,7 @@
             // ytdlGithub
             // 
             this.ytdlGithub.AutoSize = true;
-            this.ytdlGithub.Location = new System.Drawing.Point(12, 362);
+            this.ytdlGithub.Location = new System.Drawing.Point(12, 392);
             this.ytdlGithub.Name = "ytdlGithub";
             this.ytdlGithub.Size = new System.Drawing.Size(66, 13);
             this.ytdlGithub.TabIndex = 12;
@@ -141,11 +144,40 @@
             this.ytdlGithub.Text = "yt-dlp Github";
             this.ytdlGithub.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.ytdlGithub_LinkClicked);
             // 
+            // downloadLocation
+            // 
+            this.downloadLocation.Location = new System.Drawing.Point(124, 36);
+            this.downloadLocation.Name = "downloadLocation";
+            this.downloadLocation.Size = new System.Drawing.Size(323, 20);
+            this.downloadLocation.TabIndex = 14;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(19, 39);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(99, 13);
+            this.label4.TabIndex = 13;
+            this.label4.Text = "Download Location";
+            // 
+            // chooseDownloadLocationButton
+            // 
+            this.chooseDownloadLocationButton.Location = new System.Drawing.Point(453, 34);
+            this.chooseDownloadLocationButton.Name = "chooseDownloadLocationButton";
+            this.chooseDownloadLocationButton.Size = new System.Drawing.Size(60, 23);
+            this.chooseDownloadLocationButton.TabIndex = 15;
+            this.chooseDownloadLocationButton.Text = "Choose...";
+            this.chooseDownloadLocationButton.UseVisualStyleBackColor = true;
+            this.chooseDownloadLocationButton.Click += new System.EventHandler(this.chooseDownloadLocationButton_Click);
+            // 
             // mainUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(536, 382);
+            this.ClientSize = new System.Drawing.Size(536, 412);
+            this.Controls.Add(this.chooseDownloadLocationButton);
+            this.Controls.Add(this.downloadLocation);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.ytdlGithub);
             this.Controls.Add(this.consoleOutput);
             this.Controls.Add(this.label3);
@@ -177,5 +209,8 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.RichTextBox consoleOutput;
         private System.Windows.Forms.LinkLabel ytdlGithub;
+        private System.Windows.Forms.TextBox downloadLocation;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button chooseDownloadLocationButton;
     }
 }

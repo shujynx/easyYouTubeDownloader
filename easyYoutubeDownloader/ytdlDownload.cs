@@ -23,13 +23,18 @@ namespace easyYoutubeDownloader
 
         static void Completed(object sender, AsyncCompletedEventArgs e)
         {
-            MessageBox.Show("yt-dlp.exe was downloaded, re-open the program", "", MessageBoxButtons.OK);
-            Application.Exit();
+            MessageBox.Show("yt-dlp.exe was downloaded, the application will restart", "", MessageBoxButtons.OK);
+            Application.Restart();
         }
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             Process.Start("https://github.com/yt-dlp/yt-dlp");
+        }
+
+        private void ytdlDownload_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
